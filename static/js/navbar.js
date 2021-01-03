@@ -20,11 +20,19 @@ function stickyNav() {
 // Get navbar options
 var options = d3.select("nav#navbar").selectAll("a");
 
+var title = d3.select("h1 > a")
+
 options.on("click", handleNavClick)
        .on('mouseover', handleMouseOver)
        .on('mouseout', handleMouseOut);
 
+title.on("click", (d, i) => {
+  d3.selectAll("div.section").style("display", "none");
+  d3.select("#home").style("display", "flex");
+});
+
 function handleNavClick(d, i) {
+  
   let opt = d3.select(this).text();
   id = "#" + opt.split(" ").join("-").toLowerCase();
   d3.selectAll("div.section").style("display", "none");
