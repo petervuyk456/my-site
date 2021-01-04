@@ -40,12 +40,12 @@ function handleNavClick(d, i) {
   d3.selectAll("div.section").style("display", "none");
   d3.select(id).style("display", "flex");
   
-  d3.selectAll("nav > a").style("border-color", "#f9f9f9")
+  d3.selectAll("nav > a").style("border-color", "#FFF")
   d3.select(this).style("border-color", "#F05454")
 }
 
 function handleMouseOver(d, i) {
-  d3.select(this).style("color", "#F05454")
+  d3.select(this).style("color", "#F05454");
 }
 
 function handleMouseOut(d, i) {
