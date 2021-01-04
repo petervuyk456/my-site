@@ -2,19 +2,6 @@
 
 :root {
     --white:#ffffff;
-    --nav-links: #222831;
-    --nav-link-hover: #f05454;
-    --border-hover: rgb(240, 84, 84, 0.8);
-    --nav-border: #f05454;
-    --section-header-background: #222831;
-    --icon-color: #222831;
-    --header-text-1: #f05454;
-    --header-text-2: #dddddd;
-    --section-header-text: #f05454;
-    --header-background-1: #30475e;
-    --header-background-2: #dddddd;
-    --section-color: #dddddd;
-    --footer-color: #222831;
     --primary-1: #30475e;
     --primary-2: #222831;
     --secondary-1: #f05454;
@@ -107,7 +94,7 @@ i {
 }
 
 i:hover {
-    color: var(--nav-border);
+    color: var(--secondary-1);
 }
 
 nav {
@@ -132,18 +119,18 @@ nav {
     font-family: "Staatliches", Roboto;
     padding: 5px 10px;
     margin: 10px 0px 10px;
-    color: var(--nav-links);
+    color: var(--primary-2);
     border-color: var(--white);
     border-width: 0.5rem;
     border-style: solid;
 }
 
 #navbar a:first-child {
-    border-color: var(--nav-border);
+    border-color: var(--secondary-1);
 }
 
 .section {
-    background-color: var(--section-color);
+    background-color: var(--light-1);
     color: black;
     font-size: small;
     display: none;
@@ -155,8 +142,8 @@ nav {
 }
 
 .section-header {
-    background-color: var(--section-header-background);
-    color: var(--section-header-text);
+    background-color: var(--primary-2);
+    color: var(--secondary-1);
     font-family: "Staatliches", Roboto;
     padding: 25px 0px 25px;
     
@@ -196,7 +183,7 @@ nav {
     width: 85%;
     border-radius: 420px;
     border-style: solid;
-    border-color: var(--nav-link-hover);
+    border-color: var(--secondary-1);
     border-width: 0.5rem;
 }
 
@@ -223,7 +210,7 @@ nav {
     border-color: var(--primary-1);
     border-width: 0.25rem;
     color: var(--primary-2);
-    background-color: white;
+    background-color: var(--white);
 }
 
 .card:first-child {
@@ -254,11 +241,11 @@ nav {
 blockquote {
     font-size: medium;
     background: var(--white);
-    border-right: 10px solid var(--section-header-text);
+    border-right: 10px solid var(--secondary-1);
     font-style:italic;
     margin: 10px 20px 10px 0px;
     padding: 0.5em 10px;
-    color: var(--header-background-1);
+    color: var(--primary-1);
     quotes: "\201C""\201D""\2018""\2019";
 }
 
@@ -285,9 +272,9 @@ blockquote span{
     margin:0px 10%;
 }
 
-
-
 footer {
     text-align: center;
     padding: 20px;
+    background-color: var(--white);
+    margin-top: 10px
 }
