@@ -6,22 +6,22 @@
 
 // Settings
 var particleCount = 40,
-  flareCount = 30,
-  motion = 0.05,
+  flareCount = 100,
+  motion = 0.07,
   tilt = 0.05,
   color = '#f05454', //'#FFEED4',
-  particleSizeBase = 2,
+  particleSizeBase = 1.5,
   particleSizeMultiplier = 0.5,
-  flareSizeBase = 50,
-  flareSizeMultiplier = 20,
+  flareSizeBase = 30,
+  flareSizeMultiplier = 10,
   lineWidth = 2,
-  linkChance = 40, // chance per frame of link, higher = smaller chance
-  linkLengthMin = 5, // min linked vertices
-  linkLengthMax = 70, // max linked vertices
+  linkChance = 80, // chance per frame of link, higher = smaller chance
+  linkLengthMin = 3, // min linked vertices
+  linkLengthMax = 15, // max linked vertices
   linkOpacity = 0.4; // number between 0 & 1
   linkFade = 90, // link fade-out frames
   linkSpeed = 3, // distance a link travels in 1 frame
-  glareAngle = -70,
+  glareAngle = -55,
   glareOpacityMultiplier = 0.04,
   renderParticles = true,
   renderParticleGlare = true,
