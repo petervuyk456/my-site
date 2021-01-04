@@ -3,6 +3,7 @@ window.onscroll = function() {stickyNav()};
 
 // Get the navbar
 var navbar = document.getElementById("navbar");
+var sectionTitle = document.getElementsByClassName("rotate");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
@@ -11,11 +12,12 @@ var sticky = navbar.offsetTop;
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
+    d3.selectAll("div.section-title").node().classList.add("hide")
   } else {
     navbar.classList.remove("sticky");
+    d3.selectAll("div.section-title").node().classList.remove("hide")
   }
 }
-
 
 // Get navbar options
 var options = d3.select("nav#navbar").selectAll("a");
