@@ -132,7 +132,7 @@ nav {
 .section {
     background-color: var(--light-1);
     color: black;
-    font-size: small;
+    font-size: medium;
     display: none;
     overflow: auto;
 }
