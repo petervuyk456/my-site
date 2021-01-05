@@ -61,7 +61,6 @@ main {
     color: var(--secondary-1);
 }
 
-
 #page-header a {
     color: inherit;
 }
@@ -109,6 +108,13 @@ nav {
     z-index: 1;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 .content {
     z-index: 300;
 }
@@ -135,6 +141,7 @@ nav {
     font-size: medium;
     display: none;
     overflow: auto;
+    min-height: 500px;
 }
 
 #home {
@@ -180,7 +187,6 @@ nav {
     padding: 30px;
 }
 
-
 #profile-figure {
     width: 85%;
     border-radius: 420px;
@@ -192,8 +198,6 @@ nav {
 #profile-figure:hover {
   border-color: var(--primary-2);
 }
-
-
 
 .card-title {
     font-family: "Staatliches", Roboto;
@@ -235,8 +239,6 @@ nav {
 .work-experience {
     width: 50%;
 }
-
-
 
 .work-experience h2 {
     color: var(--primary-2);
@@ -326,7 +328,6 @@ nav {
 
 }
 
-
 blockquote {
     font-size: medium;
     background: var(--white);
@@ -347,11 +348,9 @@ blockquote:before {
     vertical-align: -0.4em;
 }
 
-
 blockquote p {
     display: inline;
 }
-
 
 blockquote span{
     display:block;
