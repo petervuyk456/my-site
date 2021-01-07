@@ -3,58 +3,45 @@
 :root {
     --white:#ffffff;
     --primary-1: #30475e;
+    --primary-1-op: #30475e50;
     --primary-2: #222831;
     --secondary-1: #f05454;
     --light-1: #dddddd;
+
+    --main-font: "Quicksand", Roboto;
+    --header-font: "Staatliches", Roboto;
 }
 
 body {
-  font-family: "Quicksand", Roboto;
-  margin: 0;
-  padding: 0;
-  background-color: var(--primary-1); 
-  background: radial-gradient(circle at center, var(--primary-1) 0%, var(--primary-2) 100%);
+    margin: 0;
+    padding: 0;
 }
 
-.outer {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-}
-
+/* Background canvas */
 #background {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  height: 120%;
-  width: 100%;
-}
-
-#foreground {
-  z-index: 1;
-  width: 100%;
-}
-
-header {
-    /* felix-mittermeier */
-    /* background-image: url("../img/pexels-space.jpg"); 
-    background-position: center;
-    background-size: 3035px 1707px;
-    background-repeat: no-repeat; */
     background-color: var(--primary-1);
+    background: radial-gradient(circle at center, var(--primary-1) 0%, var(--primary-2) 100%);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 120%;
     width: 100%;
 }
 
-main {
+/* Foreground containing site content */
+#foreground {
+    z-index: 1;
     width: 100%;
 }
 
-#page-header {
-    font-family: "Staatliches", Roboto;
-    font-size: 100%;
+/* Site header */
+#page-header h1 {
+    font-family: var(--header-font);
+    font-size: 9vmax;
     text-align: center;
+    margin-bottom: -15px;
+    padding-bottom: 5px;
     width: 100%;
     color: var(--secondary-1);
 }
@@ -67,15 +54,66 @@ main {
     text-decoration: none;
 }
 
+/* Site subheader */
 #page-subheader {
-    margin: 0px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: flex-start;
+    font-family: var(--main-font);
+    background-color: var(--primary-1);
 }
 
-header h2 {
-    font-size: 100%;
+.header-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icons h2 {
+    font-size: 30px;
     color: var(--light-1);
+    text-align: center;
 }
 
+.header-icons i {
+    margin-left: 20px;
+}
+
+.header-icons:first-child i {
+    margin-left: -5px;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--white);
+}
+
+.nav-link {
+    font-family: "Staatliches", Roboto;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    margin: 0px 25px;
+    color: var(--primary-2);
+    border-color: var(--white);
+    border-style: solid;
+    border-width: 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--secondary-1);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Site anchors and icons */
 a {
     color: var(--primary-2);
     text-decoration: none;
@@ -87,58 +125,22 @@ a:hover {
 }
 
 i {
+    padding: 0px 10px;
     color: var(--primary-2);
+    font-size: 20pt;
 }
 
 i:hover {
     color: var(--secondary-1);
 }
 
-nav {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: var(--white);
-    width: 100%;
-    margin: 0px auto 10px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    z-index: 1;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.content {
-    z-index: 300;
-}
-
-#navbar a {
-    display: inline;
-    font-size: x-large;
-    font-family: "Staatliches", Roboto;
-    padding: 5px 10px;
-    margin: 10px 0px 10px;
-    color: var(--primary-2);
-    border-color: var(--white);
-    border-width: 0.5rem;
-    border-style: solid;
-}
-
-#navbar a:first-child {
-    border-color: var(--secondary-1);
-}
-
+/* Sections */
 .section {
     background-color: var(--light-1);
+    font-family: var(--main-font);
     color: black;
     font-size: medium;
     display: none;
-    overflow: auto;
     min-height: 500px;
 }
 
@@ -149,7 +151,7 @@ nav {
 .section-header {
     background-color: var(--primary-2);
     color: var(--secondary-1);
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
     padding: 25px 0px 25px;
     
 }
@@ -159,19 +161,16 @@ nav {
     height: inherit;
 }
 
-.hide {
-  width: 0px;
-}
-
 .section-container {
     display: flex;
     flex-direction: row;
     margin: 20px 20px 20px 20px;
+    overflow: auto;
     justify-content: space-between;
     width: 100%;
 }
 
-.text {
+section {
     justify-items: center;
 }
 
@@ -198,7 +197,7 @@ nav {
 }
 
 .card-title {
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
     color: var(--primary-2);
     margin: 0px;
     margin-bottom: 15px;
@@ -244,7 +243,7 @@ nav {
     color: var(--primary-2);
     text-align: center;
     background-color: var(--white);
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
 }
 
 .qualifications {
@@ -258,7 +257,7 @@ nav {
     color: var(--primary-2);
     text-align: center;
     background-color: var(--white);
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
 }
 
 .qualifications div {
@@ -291,7 +290,7 @@ nav {
     text-align: left;
     color: var(--secondary-1);
     font-size: x-large;
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
     padding: 10px;
     padding-bottom: 0px;
 }
