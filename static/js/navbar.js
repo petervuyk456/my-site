@@ -2,52 +2,53 @@
 window.onscroll = function() {stickyNav()};
 
 // Get the navbar
-var navbar = document.getElementById("navbar");
-var sectionTitle = document.getElementsByClassName("rotate");
+var navbar = d3.select("#nav");
 
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+var sticky = navbar.property("offsetTop");
+var sectionTitle = d3.selectAll("div.section-header");
+var sectionContainer = d3.selectAll("div.section-container");
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-    d3.selectAll("div.section-title").node().classList.add("hide")
+  if (window.pageYOffset*1.5 >= sticky) {
+    navbar.classed("sticky", true);
+    sectionTitle.classed("hide", true);
+    sectionContainer.classed("offset", true);
   } else {
-    navbar.classList.remove("sticky");
-    d3.selectAll("div.section-title").node().classList.remove("hide")
+    navbar.classed("sticky", false);
+    sectionTitle.classed("hide", false);
+    sectionContainer.classed("offset", false);
   }
 }
 
 // Get navbar options
-var options = d3.select("nav#navbar").selectAll("a");
+var options = d3.selectAll(".nav-link");
+options.on("click", handleNavClick);
+setNavBorder(d3.select(".nav-link"));
 
-var title = d3.select("h1 > a")
 
-options.on("click", handleNavClick)
-       .on('mouseover', handleMouseOver)
-       .on('mouseout', handleMouseOut);
-
+var title = d3.select("#page-header > h1 > a");
 title.on("click", (d, i) => {
   d3.selectAll("div.section").style("display", "none");
   d3.select("#home").style("display", "flex");
 });
 
+var x
 function handleNavClick(d, i) {
-  
-  let opt = d3.select(this).text();
+  showSection(this);
+  setNavBorder(this);
+  d3.event.preventDefault();
+}
+
+function showSection(elem) {
+  let opt = d3.select(elem).text();
   id = "#" + opt.split(" ").join("-").toLowerCase();
   d3.selectAll("div.section").style("display", "none");
   d3.select(id).style("display", "flex");
-  
-  d3.selectAll("nav > a").style("border-color", "#FFF")
-  d3.select(this).style("border-color", "#F05454")
 }
 
-function handleMouseOver(d, i) {
-  d3.select(this).style("color", "#F05454");
-}
-
-function handleMouseOut(d, i) {
-  d3.select(this).style("color", "#222831")
+function setNavBorder(elem) {
+  d3.selectAll(".nav-link").style("border-color", "#FFF");
+  d3.select(elem).style("border-color", "#F05454");
 }
