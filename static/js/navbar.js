@@ -11,7 +11,7 @@ var sectionContainer = d3.selectAll("div.section-container");
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {
-  if (window.pageYOffset >= sticky) {
+  if (window.pageYOffset*1.5 >= sticky) {
     navbar.classed("sticky", true);
     sectionTitle.classed("hide", true);
     sectionContainer.classed("offset", true);
