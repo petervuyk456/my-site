@@ -27,7 +27,6 @@ var options = d3.selectAll(".nav-link");
 options.on("click", handleNavClick);
 setNavBorder(d3.select(".nav-link"));
 
-
 var title = d3.select("#page-header > h1 > a");
 title.on("click", (d, i) => {
   d3.selectAll("div.section").style("display", "none");
@@ -37,8 +36,7 @@ title.on("click", (d, i) => {
 var x
 function handleNavClick(d, i) {
   showSection(this);
-  setNavBorder(this);
-  d3.event.preventDefault();
+  setNavBorder(d3.select(this));
 }
 
 function showSection(elem) {
@@ -50,5 +48,5 @@ function showSection(elem) {
 
 function setNavBorder(elem) {
   d3.selectAll(".nav-link").style("border-color", "#FFF");
-  d3.select(elem).style("border-color", "#F05454");
+  elem.style("border-color", "#F05454");
 }
