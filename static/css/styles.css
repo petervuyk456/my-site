@@ -3,58 +3,47 @@
 :root {
     --white:#ffffff;
     --primary-1: #30475e;
+    --primary-1-op: #30475e50;
     --primary-2: #222831;
     --secondary-1: #f05454;
     --light-1: #dddddd;
+
+    --main-font: "Quicksand", Roboto;
+    --header-font: "Staatliches", Roboto;
 }
 
 body {
-  font-family: "Quicksand", Roboto;
-  margin: 0;
-  padding: 0;
-  background-color: var(--primary-1); 
-  background: radial-gradient(circle at center, var(--primary-1) 0%, var(--primary-2) 100%);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-1);
+    touch-action: none;
 }
 
-.outer {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-}
-
+/* Background canvas */
 #background {
-  position: relative;
-  z-index: -1;
-  top: 0;
-  height: 120%;
-  width: 100%;
-}
-
-#foreground {
-  z-index: 1;
-  width: 100%;
-}
-
-header {
-    /* felix-mittermeier */
-    /* background-image: url("../img/pexels-space.jpg"); 
-    background-position: center;
-    background-size: 3035px 1707px;
-    background-repeat: no-repeat; */
     background-color: var(--primary-1);
+    background: radial-gradient(circle at center, var(--primary-1) 0%, var(--primary-2) 100%);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 120%;
     width: 100%;
 }
 
-main {
+/* Foreground containing site content */
+#foreground {
+    z-index: 1;
     width: 100%;
 }
 
-#page-header {
-    font-family: "Staatliches", Roboto;
-    font-size: 100%;
+/* Site header */
+#page-header h1 {
+    font-family: var(--header-font);
+    font-size: 165px;
     text-align: center;
+    margin-bottom: -15px;
+    padding-bottom: 5px;
     width: 100%;
     color: var(--secondary-1);
 }
@@ -67,15 +56,76 @@ main {
     text-decoration: none;
 }
 
+/* Site subheader */
 #page-subheader {
-    margin: 0px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: flex-start;
+    font-family: var(--main-font);
+    background-color: var(--primary-1);
 }
 
-header h2 {
-    font-size: 100%;
+.header-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icons h2 {
+    font-size: 30px;
     color: var(--light-1);
+    text-align: center;
 }
 
+.header-icons i {
+    margin-left: 20px;
+}
+
+.header-icons:first-child i {
+    margin-left: -5px;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--white);
+    z-index: 1;
+    margin: 15px 0px;
+    height: 20%;
+}
+
+.nav-link {
+    font-family: "Staatliches", Roboto;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    margin: 0px 25px;
+    color: var(--primary-2);
+    border-color: var(--white);
+    background-color: var(--white);
+    border-style: solid;
+    border-width: 0.5rem;
+}
+
+.nav-link:first-child {
+    border-color: var(--secondary-1);
+}
+
+.nav-link:hover {
+    color: var(--secondary-1);
+}
+
+.sticky {
+    position: fixed;
+    max-height: 10%;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Site anchors and icons */
 a {
     color: var(--primary-2);
     text-decoration: none;
@@ -87,59 +137,22 @@ a:hover {
 }
 
 i {
+    padding: 0px 10px;
     color: var(--primary-2);
+    font-size: 20pt;
 }
 
 i:hover {
     color: var(--secondary-1);
 }
 
-nav {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: var(--white);
-    width: 100%;
-    margin: 0px auto 10px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    z-index: 1;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.content {
-    z-index: 300;
-}
-
-#navbar a {
-    display: inline;
-    font-size: x-large;
-    font-family: "Staatliches", Roboto;
-    padding: 5px 10px;
-    margin: 10px 0px 10px;
-    color: var(--primary-2);
-    border-color: var(--white);
-    border-width: 0.5rem;
-    border-style: solid;
-}
-
-#navbar a:first-child {
-    border-color: var(--secondary-1);
-}
-
+/* Sections */
 .section {
     background-color: var(--light-1);
+    font-family: var(--main-font);
     color: black;
     font-size: medium;
     display: none;
-    overflow: auto;
-    min-height: 500px;
 }
 
 #home {
@@ -149,38 +162,77 @@ nav {
 .section-header {
     background-color: var(--primary-2);
     color: var(--secondary-1);
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
     padding: 25px 0px 25px;
-    
 }
+
+.hide {
+    display: none;
+  }
 
 .rotate {
     writing-mode: vertical-lr;
     height: inherit;
 }
 
-.hide {
-  width: 0px;
-}
-
 .section-container {
     display: flex;
     flex-direction: row;
     margin: 20px 20px 20px 20px;
+    padding-bottom: 50px;
+    /* overflow: auto; */
     justify-content: space-between;
     width: 100%;
 }
 
-.text {
-    justify-items: center;
+.offset {
+    margin-top: 14%;
 }
+
+.section-content {
+    overflow-y: auto;
+    max-height: 95%;
+}
+
+blockquote {
+    font-size: medium;
+    background: var(--white);
+    border-right: 10px solid var(--secondary-1);
+    font-style:italic;
+    margin: 10px 20px 10px 0px;
+    padding: 0.5em 10px;
+    color: var(--primary-1);
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: var(--header-text-2);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+blockquote span{
+    display:block;
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+    margin:0px 10%;
+}
+
 
 .sidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    min-width: 400px;
+    min-width: 40%;
     background-color: var(--primary-1);
     padding: 30px;
 }
@@ -197,8 +249,12 @@ nav {
   border-color: var(--primary-2);
 }
 
+.btn:hover {
+    color: var(--secondary-1);
+}
+
 .card-title {
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
     color: var(--primary-2);
     margin: 0px;
     margin-bottom: 15px;
@@ -236,42 +292,51 @@ nav {
 
 .work-experience {
     width: 50%;
-    min-width: 565px;
-
+    margin-bottom: 10px;
 }
 
 .work-experience h2 {
     color: var(--primary-2);
     text-align: center;
     background-color: var(--white);
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
 }
 
 .qualifications {
     width: 50%;
     margin-bottom: 10px;
-    margin-right: 10px;
-    min-width: 565px;
+    margin-left: 10px;
 }
 
 .qualifications h2 {
     color: var(--primary-2);
     text-align: center;
     background-color: var(--white);
-    font-family: "Staatliches", Roboto;
+    font-family: var(--header-font);
+}
+
+.qualifications h3 {
+    color: var(--secondary-1);
+    text-align: center;
+    background-color: var(--primary-1);
+    font-family: var(--header-font);
+    margin-top: 30px;
+    padding: 5px;
 }
 
 .qualifications div {
-    margin-top: 10px;
-    background-color: var(--primary-1);
-    min-width: 100%;
-    height: 96%;
+    margin: 10px 5px 0px 5px;
+    padding: 3px;
+}
+
+.logo {
+    height: 50px;
 }
 
 .job-header {
     background-color: var(--primary-1);
-    margin-bottom: 20px;
-    height: 100px;
+    margin-top: 0px;
+    margin: 30px 0px;
 }
 
 .job-header:last-child {
@@ -283,32 +348,39 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     flex-direction: row;
-    max-width: 100%;
-    min-width: 532px;
+    margin: 20px;
+    margin-top: 30px;
+    word-wrap: none;
 }
 
 .job-title h3 {
     text-align: left;
     color: var(--secondary-1);
-    font-size: x-large;
-    font-family: "Staatliches", Roboto;
+    font-size:150%;
+    font-family: var(--header-font);
     padding: 10px;
     padding-bottom: 0px;
+    min-height: 50px;
+    word-wrap: none;
 }
 
 .company {
     padding-right: 10px;
+    margin-right: 10px;
+    margin: 0;
     text-align: right;
     font-size: medium;
     background-color: var(--white);
-    margin: auto;
     color: var(--primary-1);
 }
 
 .company-logo {
-    max-width: 100%;
-    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 20%;
+    max-height: 50px;
     margin: 5px;
+    min-width: 50px;
 }
 
 .company-logo img{
@@ -328,41 +400,35 @@ nav {
 
 }
 
-blockquote {
-    font-size: medium;
-    background: var(--white);
-    border-right: 10px solid var(--secondary-1);
-    font-style:italic;
-    margin: 10px 20px 10px 0px;
-    padding: 0.5em 10px;
-    color: var(--primary-1);
-    quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-    color: var(--header-text-2);
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-}
-
-blockquote p {
-    display: inline;
-}
-
-blockquote span{
-    display:block;
-    text-align: right;
-    font-style: normal;
-    font-weight: bold;
-    margin:0px 10%;
-}
-
+/* Footer */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     padding: 20px;
     background-color: var(--white);
     margin-top: 10px
 }
+
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-2);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-1);
+  }
