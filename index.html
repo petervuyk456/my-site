@@ -1,450 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- Font Awesome css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <!-- Custom css -->
-    <link rel="stylesheet" href="static/css/styles.css">
-    <title>Peter Vuyk</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Font Awesome css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- Custom css -->
+  <link rel="stylesheet" href="static/css/styles.css">
+  <title>Peter Vuyk</title>
 </head>
 <body>
-    <div class="container-lg">
-        <div id="foreground">
-            <header>
-                <div id="page-header">
-                    <h1><a href="#">Peter Vuyk</a></h1>
-                </div>
-                <div id="page-subheader">
-                    <div class="header-icons">
-                        <div>
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div>
-                            <h2>Developer</h2>
-                        </div>
-                    </div>
-                    <div class="header-icons">
-                        <div>
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div>
-                            <h2>Data Scientist</h2>
-                        </div>
-                    </div>
-                    <div class="header-icons">
-                        <div>
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div>
-                            <h2>Engineer</h2>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <nav id = "nav" class="navbar navbar-expand-lg navbar-light">
-                <div class="container-md">
-                    <button class="navbar-toggler float-md-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About Me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Projects</a>
-                            </li>
+  
+  <div id="contact-form" class="modal">
+    <span class="close">&times;</span>
+    <div id="loginScreen" class="modal-content">
+      
+      <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+      action="https://script.google.com/macros/s/AKfycbwq6vniMVKFojNp1b69f7eiHjrkGuHT7DPJYEbetqnOSCb-Eu8mJq-JR4vV8YtxBhoK/exec">
+        <!-- change the form action to your script url -->
+    
+        <div class="form-elements">
+          <fieldset class="pure-group">
+            <label for="name">Name: </label>
+            <input id="name" name="name" placeholder="" />
+          </fieldset>
 
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <main class="content">
-                <div id="home" class="section">
-                    <div class="section-header">
-                        <h3 class="rotate">Home</h3>
-                    </div>
-                    <div class="row section-container"">
-                        <div class="section-content col">
-                            <section>
-                                <h4>Hey there stranger, thanks for stopping by!</h4>
-                                I'm finished with the cheesy intro, all jokes aside.
-                                <br>
-                                <br>To learn a bit about me, you'll need to close your eyes. 
-                                <br>Hours in that thinking state is how I spend a lot of time.
-                                <br>
-                                <br>I yearn to grow and better, no different than all of you.
-                                <br>I enjoy country music and pullups... okay, perhaps stranger than some of you.
-                                <br>
-                                <br>In high school I was a wrestler, it taught me to persevere.
-                                <br>As an undergrad I did research, and learned to mechanically engineer.
-                                <br>
-                                <br>I love complex math and puzzles - by complex, I mean new to me!
-                                <br>Perhaps that inspired me to code, and all its intricacy.
-                                <br>
-                                <br>I started learning Python, and grew fond of it indeed!
-                                <br>But soon I learned that scripting had a lot more to it you see.
-                                <br>
-                                <br>To my keyboard warriors out there, I know you know what I mean.
-                                <br>It takes more than swifty keystrokes, to get a repo from A to Z.
-                                <br>
-                                <br>Somehow I never quit, despite package management and Git.
-                                <br>And now I'm seriously thankful, for every single add/commit.
-                                <br>
-                                <br>It takes a lot to be a programmer, of that we can all agree.
-                                <br>Now throw data in the mix... I swear I'm just a little crazy.
-                                <br>
-                                <br>You see failure is our only option: the catalyst to proficiency.
-                                <br>I've always loved the irony of failure yielding expertise.
-                                <br>
-                                <br>Development and data are my newest hobbies (perhaps I got the wrong degree).
-                                <br>I thought about it a while... nah it's just adversity.
-                                <br>
-                                <br>It may take me a little a longer, but one day I believe,
-                                <br>I'll be a full stack data scientist, or something in between.
-                                <br>
-                                <br>Oh, and sometimes, I dabble with poetry.
-                            </section>
-                            <br>
-                            <blockquote>
-                                I am always doing that which I cannot do, in order that I may learn how to do it.
-                                <span>- Pablo Picasso</span>
-                            </blockquote>
-                        </div>
-                        <div class="sidebar col-lg-3">
-                            <div class="card">
-                                <img id="profile-figure" src="static/img/profile_photo_close_1_1_20.jpg">
-                            </div>
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <a href="static/downloads/Peter_Vuyk_Resume.pdf" target="_blank">
-                                        <button class="btn" ><i class="fa fa-download"></i> Resume</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Hobbies</h5>
-                                    <div class="icons">
-                                        <i class="fas fa-dumbbell" data-toggle="tooltip" data-placement="bottom" title="calisthenics"></i>
-                                        <i class="fas fa-code-branch"  data-toggle="tooltip" data-placement="bottom" title="programming"></i>
-                                        <i class="fab fa-spotify"  data-toggle="tooltip" data-placement="bottom" title="spotify"></i>
-                                        <i class="fas fa-book" data-toggle="tooltip" data-placement="bottom" title="nonfiction"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Interests</h5>
-                                    <div class="icons">
-                                        <i class="fas fa-chalkboard-teacher"  data-toggle="tooltip" data-placement="bottom" title="teaching"></i>
-                                        <i class="fas fa-piggy-bank"  data-toggle="tooltip" data-placement="bottom" title="finance/investing"></i>
-                                        <i class="fas fa-sun"  data-toggle="tooltip" data-placement="bottom" title="power generation"></i>
-                                        <i class="fas fa-landmark"  data-toggle="tooltip" data-placement="bottom" title="politics"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Reading List 2021</h5>
-                                    <div class="icons">
-                                        <ul id="reading-list">
-                                            <li class="book"><a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/">Pragmatic Programmer</a></li>
-                                            <li class="book"><a href="https://davidgoggins.com/book/">Can't Hurt Me</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="about-me" class="section">
-                    <div class="section-header">
-                        <h3 class="rotate">About Me</h3>
-                    </div>
-                    <div class="section-container">
-                        <div class="work-experience">
-                            <h2>Work Experience</h2>
-                            <a data-bs-toggle="collapse" href="#job7" role="button" aria-expanded="false" aria-controls="job7">
-                                <div class="job-header">
-                                    <div class="job-title">
-                                        <h3>Data Analytics & Viz TA</h3>
-                                        <div class="company-logo">
-                                            <img class="logo" src="static/img/trilogy-logo.png" alt="trilogyed">
-                                        </div>
-                                    </div>
-                                    <div class="company-wrapper">
-                                        <h4 class="company">        
-                                            <a href="https://www.trilogyed.com/">Trilogy Ed Bootcamp</a>
-                                        </h4>
-                                    </div>
-                                    <div class="date-wrapper">
-                                        <span class="start-end">
-                                            <p>Sep 2020 - Present</p>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="collapse" id="job7">
-                                <div>
-                                    <ul>
-                                        <li>Coordinate with instructor to teach and assist students in learning how to mine, mung, analyze, and visualize data using modern data process and analytics techniques</li>
-                                        <li>Teach subjects starting with Excel and VBA and progressing through Python, Git/GitHub, APIs and JSON, JavaScript, HTML/CSS, SQL & NoSQL, R, Tableau, descriptive and inferential statistics, Hadoop, Spark, and machine learning.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a data-bs-toggle="collapse" href="#job6" role="button" aria-expanded="false" aria-controls="job6">
-                                <div class="job-header" data-toggle="collapse" href="#job6" role="button">
-                                    <div class="job-title">
-                                        <h3>X12/X15 Field Test Engineer</h3>
-                                        <div class="company-logo">
-                                            <img src="static/img/cummins-logo.png" alt="Cummins">
-                                        </div>
-                                    </div>                   
-                                    <h4 class="company">
-                                        <a href="https://www.cummins.com/">Cummins, Inc</a>
-                                    </h4>
-                                    <span class="start-end">
-                                        <p>Jul 2020 - Present</p>
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="collapse" id="job6">
-                                <div>
-                                    <ul>
-                                        <li>Facilitate customer relations and service with 5 outside customers agreeing to operate with a development engine</li>
-                                        <li>Utilize MATLAB and Excel tooling for assessing duty cycle and performance data being transmitted from field units</li>
-                                        <li>Support team via Power BI report generation/maintenance, SharePoint organization, and Nintex workflow automation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a data-bs-toggle="collapse" href="#job5" role="button" aria-expanded="false" aria-controls="job5">
-                                <div class="job-header" data-toggle="collapse" href="#job5" role="button">
-                                    <div class="job-title">
-                                        <h3>Dyno Test Engineer</h3>
-                                        <div class="company-logo">
-                                            <img src="static/img/cummins-logo.png" alt="Cummins">
-                                        </div>
-                                    </div>
-                                    <h4 class="company">
-                                        <a href="https://www.cummins.com/">Cummins, Inc</a>
-                                    </h4>
-                                    <span class="start-end">
-                                        <p>Jan 2019 - Jul 2020</p>
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="collapse" id="job5">
-                                <div>
-                                    <ul>
-                                        <li>Executed seven local and offsite engine tests (typically running 24/7) in conjunction with mechanical support, IT, facilities, operations, and product validation teams via regular presentations and targeted communications</li>
-                                        <li>Automated engine testing with Cyflex and processed/analyzed collected data with Excel VB, GNU Bash, and Python</li>
-                                        <li>Developed Excel/VBA and MATLAB tools for processing, analyzing, and visualizing large, disparate datasets containing raw engine and test cell sensor data. Tools currently used by over 50+ validation engineers and growing.</li>
-                                        <li>Mentored new test engineers on best-practices in data analysis, communication, organization, and test planning</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a data-bs-toggle="collapse" href="#job4" role="button" aria-expanded="false" aria-controls="job4">
-                                <div class="job-header" data-toggle="collapse" href="#job4" role="button">
-                                    <div class="job-title">
-                                        <h3>Performance Modeling Intern</h3>
-                                        <div class="company-logo">
-                                            <img src="static/img/cummins-logo.png" alt="Cummins">
-                                        </div>
-                                    </div>
-                                    <h4 class="company">
-                                        <a href="https://www.cummins.com/">Cummins, Inc</a>
-                                    </h4>
-                                    <span class="start-end">
-                                        <p>May 2018 - Aug 2018</p>
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="collapse" id="job4">
-                                <div>
-                                    <ul>
-                                        <li>Delivered MATLAB GUI for k means clustering customer engine operation data to improve product validation by helping to quantify the characteristics of representative or anomalous product usage across engine variations and applications.</li>
-                                        <li>Executed physics-derived damage factor regression models to predict piston and cylinder head thermal fatigue life based on virtual sensors to compare and validate the abusiveness of engine testing and customer usage</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a data-bs-toggle="collapse" href="#job3" role="button" aria-expanded="false" aria-controls="job3">
-                                <div class="job-header" data-toggle="collapse" href="#job3" role="button">
-                                    <div class="job-title">
-                                        <h3>Undergrad Research</h3>
-                                        <div class="company-logo">
-                                            <img src="static/img/Owens-Corning-Logo.jpeg" alt="Owens Corning">
-                                            <img src="static/img/buckeye-logo.png" alt="Ohio State Buckeyes">
-                                        </div>
-                                    </div>
-                                    <h4 class="company">
-                                        <a href="https://www.owenscorning.com/en-us">Owens Corning</a> & <a href="https://lsvr.osu.edu/">LSVR, Ohio State University</a>
-                                    </h4>
-                                    <span class="start-end">
-                                        <p>May 2017 - Dec 2018</p>
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="collapse" id="job3">
-                                <div>
-                                    <ul>
-                                        <li>Designed experiments to study response of elastomeric objects during vibrational, impact, or static loading applications</li>
-                                        <li>Simulated structural response of materials using FEA software. Utilized 3D printing for creating test specimens</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a data-bs-toggle="collapse" href="#job2" role="button" aria-expanded="false" aria-controls="job2">
-                                <div class="job-header" data-toggle="collapse" href="#job2" role="button">
-                                    <div class="job-title">
-                                        <h3>Undergraduate TA</h3>
-                                        <div class="company-logo">
-                                            <img src="static/img/buckeye-logo.png" alt="Ohio State Buckeyes">
-                                        </div>
-                                    </div>
-                                    <h4 class="company">
-                                        <a href="https://www.osu.edu/">Ohio State University</a>
-                                    </h4>
-                                    <span class="start-end">
-                                        <p>Jan 2017 - Dec 2017</p>
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="collapse" id="job2">
-                                <div>
-                                    <ul>
-                                        <li>Engaged students in open lab to assist with electronics, controls, and Arduino programming labs and projects</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a data-bs-toggle="collapse" href="#job1" role="button" aria-expanded="false" aria-controls="job1">
-                                <div class="job-header" data-toggle="collapse" href="#job1" role="button">
-                                    <div class="job-title">
-                                        <h3>Industrial Engineering Intern</h3>
-                                        <div class="company-logo">
-                                            <img src="static/img/dhl-logo.png" alt="DHL Express">
-                                        </div>
-                                    </div>
-                                    <h4 class="company">
-                                        <a href="https://www.dhl.com/en/express.html">DHL Express</a>
-                                    </h4>
-                                    <span class="start-end">
-                                        <p>May 2016 - Dec 2016</p>
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="collapse" id="job1">
-                                <div>
-                                    <ul>
-                                        <li>Developed Excel VBA and SSMS solution that centralizes and pre-processes employee productivity data (hours, production, quality, etc.) from disparate sources and regularly reports KPI trend visualizations to management</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="qualifications">
-                            <h2>Qualifications</h2>
-                            <h3>Tools, Languages, & Frameworks</h3>
-                            <div class="qual-icons row">
-                                <div class="col">
-                                    <div>
-                                        <a href="https://www.python.org/" target="_blank"><img class="logo" src="static/img/python-logo.png" alt="python-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.postgresql.org/" target="_blank"><img class="logo" src="static/img/postgresql-logo.png" alt="postgresql-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.mongodb.com/" target="_blank"><img class="logo" src="static/img/mongodb-logo.png" alt="mongodb-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://code.visualstudio.com/" target="_blank"><img class="logo" src="static/img/vscode-logo.png" alt="vscode-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://colab.research.google.com/" target="_blank"><img class="logo" src="static/img/colab-logo.png" alt="colab-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://d3js.org/" target="_blank"><img class="logo" src="static/img/d3-logo.png" alt="d3-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.w3.org/" target="_blank"><img class="logo" src="static/img/js-html-css-logos.png" alt="js-html-css-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://nodejs.org/en/" target="_blank"><img class="logo" src="static/img/node-logo.png" alt="node-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://reactjs.org/" target="_blank"><img class="logo" src="static/img/react-logo.png" alt="react-logo"></a>
-                                    </div>
-                                </div>
-                                <div class="col"> 
-                                    <div>
-                                        <a href="https://git-scm.com/" target="_blank"><img class="logo" src="static/img/git-logo.png" alt="git-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.gnu.org/software/bash/" target="_blank"><img class="logo" src="static/img/bash-logo.png" alt="bash-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.docker.com/" target="_blank"><img class="logo" src="static/img/docker-logo.png" alt="docker-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.mathworks.com/products/matlab.html" target="_blank"><img class="logo" src="static/img/matlab-logo.png" alt="matlab-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://docs.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office" target="_blank"><img class="logo" src="static/img/vba-logo.png" alt="vba-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://leafletjs.com/" target="_blank"><img class="logo" src="static/img/leaflet-logo.png" alt="leaflet-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank"><img class="logo" src="static/img/bootstrap-logo.png" alt="bootstrap-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://jquery.com/" target="_blank"><img class="logo" src="static/img/jquery-logo.png" alt="jquery-logo"></a>
-                                    </div>
-                                    <div>
-                                        <a href="https://webpack.js.org/" target="_blank"><img class="logo" src="static/img/webpack-logo.png" alt="webpack-logo"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="projects" class="section">
-                    <div class="section-header">
-                        <h3 class="rotate">Projects</h3>
-                    </div>
-                    <div class="section-container">
-
-                    </div>
-                </div>
-
-            </main>
-            <footer>
-                <a href="https://github.com/petervuyk456"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/peter-vuyk-645284a8/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:peter.vuyk456@gmail.com"><i class="fas fa-envelope"></i></a>
-            </footer> 
+          <fieldset class="pure-group">
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" type="email" value=""
+            required placeholder="your.name@email.com"/>
+          </fieldset>
+    
+          <fieldset class="pure-group">
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" rows="10"
+            placeholder="How can I help?"></textarea>
+          </fieldset>
+    
+          <fieldset class="pure-group honeypot-field">
+            <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+            <input id="honeypot" type="text" name="honeypot" value="" />
+          </fieldset>
+    
+          <button class="pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
         </div>
-        <canvas id="background">
-        </canvas>
+    
+        <!-- Customise the Thankyou Message People See when they submit the form: -->
+        <div class="thankyou_message" style="display:none;">
+          <h2><em>Thank you</em> for reaching out! Please give me time to review your message and get back to you.</h2>
+        </div>
+    
+      </form>
     </div>
-    <!-- D3.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.3.1/d3.js" integrity="sha512-CQk1Bd5qczb5n31LOjQ8nmasspRasRP95SzVXcjM2Crm+3pmP/evOvFqrHeR26IA6pkgraiKom0aGWF29d8xqQ==" crossorigin="anonymous"></script>
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous"></script>
-    <!-- Bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <!-- Delauney Triangulation -->
-    <script src="https://cdn.rawgit.com/ironwallaby/delaunay/master/delaunay.js"></script>
-    <!-- Custom js -->
-    <script src="static/js/navbar.js"></script>
-    <script src="static/js/tooltips.js"></script>
-    <script src="static/js/misc.js"></script>
-    <script src="static/js/drifter_stars_bground.js"></script>    
+  </div>
+  <div class="container-lg">
+    <div id="foreground">
+      <header>
+        <div id="page-header">
+          <h1>Peter Vuyk</h1>
+        </div>
+        <div id="page-subheader">
+          <div class="header-icons">
+            <div>
+              <i class="fas fa-code"></i>
+            </div>
+            <div>
+              <h2>Developer</h2>
+            </div>
+          </div>
+          <div class="header-icons">
+            <div>
+              <i class="fas fa-database"></i>
+            </div>
+            <div>
+              <h2>Data Scientist</h2>
+            </div>
+          </div>
+          <div class="header-icons">
+            <div>
+              <i class="fas fa-tools"></i>
+            </div>
+            <div>
+              <h2>Engineer</h2>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav id = "nav" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-md">
+          <button class="navbar-toggler float-md-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+           <ul class="nav">
+              <li class="nav-item">
+                <a id="home-link" class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a id="about-link" class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a id="contact-link" class="nav-link" href="#">Contact</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main class="content">
+        <div id="home" class="section">
+          <div class="section-header">
+            <h3 class="rotate">Home</h3>
+          </div>
+          <div class="row section-container"">
+            <div class="section-content col">
+              <section>
+                <blockquote>
+                  I am always doing that which I cannot do, in order that I may learn how to do it.
+                  <span>- Pablo Picasso</span>
+                </blockquote>
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Hello and welcome to my website!</h5>
+                    <hr>
+                    <p class="card-text">This site is your opportunity to learn all <a class="aboutLink" role="button" href="">about me</a> and, if you venture to guess, my personality.</p>
+                    <p class="card-text">
+                      <h3>Personal Philosophies</h3>
+                    <p> 
+                      <ol>
+                        <li>
+                          I am firmly beholden to the notion that if you are going to do something (and I mean anything), you do it well AT MINIMUM. <br>At best, you <em>astound</em>. 
+                        </li>
+                        <li>
+                          Constructive feedback is the fuel to my engine. I will never take it personally, just give it to me straight.
+                        </li>
+                        <li>
+                          I love to learn new things proportional to their level of difficulty and overall utility.
+                        </li>
+                        <li>
+                          When I say "I aim to please", I really mean "I aim to deliver solutions that are well-tested, user-centric, modern, and bad-ass". <br> This mentality tends to leave my customers satisfied, but the main reason for the approach is that it's a hell of an effective way to learn and achieve mastery. 
+                        </li>
+                        <li>
+                          I adhere to the philosophy that the mind directs the body, but that you are not your mind. In other words,  <a href="https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs" target="_blank">Maslow's Hierarchy of Needs</a> for personal development.<br>Challenging yourself physically (eating well, hard exercise, good hygiene, etc.) establishes a foundation upon which we can truly push ourselves mentally (knowledge, memorization/learning rate, intuition, mindfulness etc.) establishes a foundation upon which we can truly change and improve our whole self through self-reflection and self-actualization.
+                        </li>
+                        <li>
+                          I appreciate a dynamic and evolving workflow/workload (it expands the mind and, in moderation, improves our ability to manage time and ideas) but directed focus is where I thrive.
+                        </li>
+                        <li>
+                          Almost every great idea ever had has been recorded, discussed, and contradicted in a book/blog/podcast. And that is the story of why you should read and listen before forming opinions.
+                        </li>
+                      </ol>
+                    </p>
+                    <p class="card-text">Enjoy exploring my site, and feel free to <a id="contactLink" role="button">reach out with questions, project ideas, or work.</a></p>
+                  </div>
+                </div>
+                <br>
+                <button id="poem-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePoem" aria-expanded="false" aria-controls="collapsePoem">A Poem</button>
+                <div class="collapse" id="collapsePoem">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4>Hey there stranger, thanks for stopping by!</h4>
+                      I'm finished with the cheesy intro, all jokes aside.
+                      <br>
+                      <br>To learn a bit about me, you'll need to close your eyes. 
+                      <br>Hours in that thinking state is how I spend a lot of time.
+                      <br>
+                      <br>I yearn to grow and better, no different than all of you.
+                      <br>I enjoy country music and pullups... okay, perhaps stranger than some of you.
+                      <br>
+                      <br>In high school I was a wrestler, it taught me to persevere.
+                      <br>As an undergrad I did research, and learned to mechanically engineer.
+                      <br>
+                      <br>I love complex math and puzzles - by complex, I mean new to me!
+                      <br>Perhaps that inspired me to code, and all its intricacy.
+                      <br>
+                      <br>I started learning Python, and grew fond of it indeed!
+                      <br>But soon I learned that scripting had a lot more to it you see.
+                      <br>
+                      <br>To my keyboard warriors out there, I know you know what I mean.
+                      <br>It takes more than swifty keystrokes, to get a repo from A to Z.
+                      <br>
+                      <br>Somehow I never quit, despite package management and Git.
+                      <br>And now I'm seriously thankful, for every single add/commit.
+                      <br>
+                      <br>It takes a lot to be a programmer, of that we can all agree.
+                      <br>Now throw data in the mix... I swear I'm just a little crazy.
+                      <br>
+                      <br>You see failure is our only option: the catalyst to proficiency.
+                      <br>I've always loved the irony of failure yielding expertise.
+                      <br>
+                      <br>Development and data are my newest hobbies (perhaps I got the wrong degree).
+                      <br>I thought about it a while... nah it's just adversity.
+                      <br>
+                      <br>Oh, and sometimes, I dabble in sketch art and poetry.
+                    </div>  
+                  </div>
+                </div>
+                <button id="contact-button">Contact Me</button>
+              </section>
+              
+
+            </div>
+            <div class="sidebar col-lg-3">
+              <div class="card1">
+                <img id="profile-figure" src="static/img/profile_photo_close_1_1_20.jpg">
+              </div>
+              <div class="card1">
+                <div class="card1-body text-center">
+                  <a href="static/downloads/Peter_Vuyk_Resume.pdf" target="_blank">
+                    <button class="btn" ><i class="fa fa-download"></i> Resume</button>
+                  </a>
+                </div>
+              </div>
+              <div class="card1">
+                <div class="card1-body text-center">
+                  <h5 class="card1-title">Hobbies</h5>
+                  <div class="icons">
+                    <i class="fas fa-dumbbell" data-toggle="tooltip" data-placement="bottom" title="calisthenics"></i>
+                    <i class="fas fa-code-branch" data-toggle="tooltip" data-placement="bottom" title="programming"></i>
+                    <i class="fab fa-spotify" data-toggle="tooltip" data-placement="bottom" title="spotify"></i>
+                    <i class="fas fa-book" data-toggle="tooltip" data-placement="bottom" title="nonfiction"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card1">
+                <div class="card1-body text-center">
+                  <h5 class="card1-title">Interests</h5>
+                  <div class="icons">
+                    <i class="fas fa-chalkboard-teacher" data-toggle="tooltip" data-placement="bottom" title="teaching"></i>
+                    <i class="fas fa-piggy-bank" data-toggle="tooltip" data-placement="bottom" title="finance/investing"></i>
+                    <i class="fas fa-sun" data-toggle="tooltip" data-placement="bottom" title="power generation"></i>
+                    <i class="fas fa-landmark" data-toggle="tooltip" data-placement="bottom" title="politics"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card1">
+                <div class="card1-body text-center">
+                  <h5 class="card1-title">Reading List 2021</h5>
+                  <div class="icons">
+                    <ul id="reading-list">
+                      <li class="book"><a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/">Pragmatic Programmer</a></li>
+                      <li class="book"><a href="https://davidgoggins.com/book/">Can't Hurt Me</a></li>
+                      <li class="book"><a href="https://www.radicalcandor.com/">Radical Candor</a></li>
+                      <li class="book"><a href="https://book.umanaidoomd.com/">This Is Your Brain on Food</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="about" class="section">
+          <div class="section-header">
+            <h3 class="rotate">About Me</h3>
+          </div>
+          <div class="section-container">
+            <div class="container">
+              <div class="row">
+                <div id="about-me-buttons-container" class="col-3">
+                  <a id="show-work-experience" class="about-me-opts">
+                    Work Experience
+                  </a>
+                  <a id="show-education" class="about-me-opts">
+                    Education
+                  </a>
+                  <a id="show-qualifications" class="about-me-opts">
+                    Qualifications
+                  </a>
+                  <a id="show-projects" class="about-me-opts">
+                    Projects
+                  </a>
+                </div>
+                <div id="about-me-content-container" class="col-9">
+                  <div class="work-experience">
+                    <h2>Work Experience</h2>
+                    <div id="job-description8">
+                      <a id="job-8-parent" data-bs-toggle="collapse" href="#job8" role="button"  aria-expanded="false" aria-controls="job8">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>Inciter - Contract Developer</h3>
+                            <div class="company-logo">
+                              <img class="logo" src="static/img/inciter-logo.png" alt="inciter">
+                            </div>
+                          </div>
+                          <div class="company-wrapper">
+                            <h4 class="company">    
+                              <a href="https://www.inciter.io/">Inciter</a>
+                            </h4>
+                          </div>
+                          <div class="date-wrapper">
+                            <span class="start-end">
+                              <p>Nov 2020 - Present</p>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job8" data-parent="job-8-parent" >
+                        <div>
+                          <ul>
+                            <li>
+                              Perform ad-hoc data analytics and engineering tasks i.e. pipelines, data exploration and analytics, web scraping (Python, SQL, etc.)
+                            </li>
+                            <li>
+                              Provide web application frontend (Vue.js) and backend/api (Node.js) development support
+                            </li>
+                            <li>
+                              Visual Basic/Excel application development
+                            </li>
+                            <li>
+                              Work closely with Solutions Architect and clients to help identify needs, perform user testing, and follow Agile dev methods toward robust, user-centric deliverables
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description7">
+                      <a id="job-7-parent" data-bs-toggle="collapse" href="#job7" role="button"  aria-expanded="false" aria-controls="job7">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>Data Analytics & Viz TA</h3>
+                            <div class="company-logo">
+                              <img src="static/img/trilogy-logo.png" alt="trilogyed">
+                            </div>
+                          </div>
+                          <div class="company-wrapper">
+                            <h4 class="company">    
+                              <a href="https://www.trilogyed.com/">Trilogy Ed Bootcamp</a>
+                            </h4>
+                          </div>
+                          <div class="date-wrapper">
+                            <span class="start-end">
+                              <p>Sep 2020 - Present</p>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job7" data-parent="job-7-parent" >
+                        <div>
+                          <ul>
+                            <li>Coordinate with instructor to teach and assist students in learning how to mine, mung, analyze, and visualize data using modern data process and analytics techniques</li>
+                            <li>Teach subjects starting with Excel and VBA and progressing through Python, Git/GitHub, APIs and JSON, JavaScript, HTML/CSS, SQL & NoSQL, R, Tableau, descriptive and inferential statistics, Hadoop, Spark, and machine learning.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description6">
+                      <a data-bs-toggle="collapse" href="#job6" role="button"  aria-expanded="false" aria-controls="job6">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>X12/X15 Field Test Engineer</h3>
+                            <div class="company-logo">
+                              <img src="static/img/cummins-logo.png" alt="Cummins">
+                            </div>
+                          </div>          
+                          <h4 class="company">
+                            <a href="https://www.cummins.com/">Cummins, Inc</a>
+                          </h4>
+                          <span class="start-end">
+                            <p>Jul 2020 - Present</p>
+                          </span>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job6">
+                        <div>
+                          <ul>
+                            <li>Facilitate customer relations and service with 5 outside customers agreeing to operate with a development engine</li>
+                            <li>Utilize MATLAB and Excel tooling for assessing duty cycle and performance data being transmitted from field units</li>
+                            <li>Support team via Power BI report generation/maintenance, SharePoint organization, and Nintex workflow automation</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description5">
+                      <a data-bs-toggle="collapse" href="#job5" role="button"  aria-expanded="false" aria-controls="job5">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>Dyno Test Engineer</h3>
+                            <div class="company-logo">
+                              <img src="static/img/cummins-logo.png" alt="Cummins">
+                            </div>
+                          </div>
+                          <h4 class="company">
+                            <a href="https://www.cummins.com/">Cummins, Inc</a>
+                          </h4>
+                          <span class="start-end">
+                            <p>Jan 2019 - Jul 2020</p>
+                          </span>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job5">
+                        <div>
+                          <ul>
+                            <li>Executed seven local and offsite engine tests (typically running 24/7) in conjunction with mechanical support, IT, facilities, operations, and product validation teams via regular presentations and targeted communications</li>
+                            <li>Automated engine testing with Cyflex and processed/analyzed collected data with Excel VB, GNU Bash, and Python</li>
+                            <li>Developed Excel/VBA and MATLAB tools for processing, analyzing, and visualizing large, disparate datasets containing raw engine and test cell sensor data. Tools currently used by over 50+ validation engineers and growing.</li>
+                            <li>Mentored new test engineers on best-practices in data analysis, communication, organization, and test planning</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description4">
+                      <a data-bs-toggle="collapse" href="#job4" role="button"  aria-expanded="false" aria-controls="job4">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>Performance Modeling Intern</h3>
+                            <div class="company-logo">
+                              <img src="static/img/cummins-logo.png" alt="Cummins">
+                            </div>
+                          </div>
+                          <h4 class="company">
+                            <a href="https://www.cummins.com/">Cummins, Inc</a>
+                          </h4>
+                          <span class="start-end">
+                            <p>May 2018 - Aug 2018</p>
+                          </span>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job4">
+                        <div>
+                          <ul>
+                            <li>Delivered MATLAB GUI for k means clustering customer engine operation data to improve product validation by helping to quantify the characteristics of representative or anomalous product usage across engine variations and applications.</li>
+                            <li>Executed physics-derived damage factor regression models to predict piston and cylinder head thermal fatigue life based on virtual sensors to compare and validate the abusiveness of engine testing and customer usage</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description3">
+                      <a data-bs-toggle="collapse" href="#job3" role="button"  aria-expanded="false" aria-controls="job3">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>Undergrad Research</h3>
+                            <div class="company-logo">
+                              <img src="static/img/Owens-Corning-Logo.jpeg" alt="Owens Corning">
+                              <img src="static/img/buckeye-logo.png" alt="Ohio State Buckeyes">
+                            </div>
+                          </div>
+                          <h4 class="company">
+                            <a href="https://www.owenscorning.com/en-us">Owens Corning</a> & <a href="https://lsvr.osu.edu/">LSVR, Ohio State University</a>
+                          </h4>
+                          <span class="start-end">
+                            <p>May 2017 - Dec 2018</p>
+                          </span>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job3">
+                        <div>
+                          <ul>
+                            <li>Designed experiments to study response of elastomeric objects during vibrational, impact, or static loading applications</li>
+                            <li>Simulated structural response of materials using FEA software. Utilized 3D printing for creating test specimens</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description2">
+                      <a data-bs-toggle="collapse" href="#job2" role="button"  aria-expanded="false" aria-controls="job2">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>Undergraduate TA</h3>
+                            <div class="company-logo">
+                              <img src="static/img/buckeye-logo.png" alt="Ohio State Buckeyes">
+                            </div>
+                          </div>
+                          <h4 class="company">
+                            <a href="https://www.osu.edu/">Ohio State University</a>
+                          </h4>
+                          <span class="start-end">
+                            <p>Jan 2017 - Dec 2017</p>
+                          </span>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job2">
+                        <div>
+                          <ul>
+                            <li>Engaged students in open lab to assist with electronics, controls, and Arduino programming labs and projects</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description1">
+                      <a data-bs-toggle="collapse" href="#job1" role="button"  aria-expanded="false" aria-controls="job1">
+                        <div class="job-header">
+                          <div class="job-title">
+                            <h3>Industrial Engineering Intern</h3>
+                            <div class="company-logo">
+                              <img src="static/img/dhl-logo.png" alt="DHL Express">
+                            </div>
+                          </div>
+                          <h4 class="company">
+                            <a href="https://www.dhl.com/en/express.html">DHL Express</a>
+                          </h4>
+                          <span class="start-end">
+                            <p>May 2016 - Dec 2016</p>
+                          </span>
+                        </div>
+                      </a>
+                      <div class="collapse" id="job1">
+                        <div>
+                          <ul>
+                            <li>Developed Excel VBA and SSMS solution that centralizes and pre-processes employee productivity data (hours, production, quality, etc.) from disparate sources and regularly reports KPI trend visualizations to management</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qualifications">
+                    <h2>Qualifications</h2>
+
+                    <h3>Cloud Services</h3>
+                    <div class="qual-icons">
+                      <div>
+                        <a href="https://aws.amazon.com/" target="_blank"><img class="logo" src="static/img/aws-logo.png" alt="aws-logo" data-toggle="tooltip" data-placement="top" title="AWS - my go-to for cloud services i.e. production-level deployment, development, data engineering, etc."></a>
+                      </div>
+                      <div>
+                        <a href="https://www.serverless.com/" target="_blank"><img class="logo" src="static/img/serverless-logo.png" alt="serverless-logo" data-toggle="tooltip" data-placement="top" title="Serverless - Cloud infrastructure as code"></a>
+                      </div>
+                    </div>
+
+                    <h3>Data Engineering and Analytics</h3>
+                    <div class="qual-icons">
+                      <div>
+                        <a href="https://www.postgresql.org/" target="_blank"><img class="logo" src="static/img/postgresql-logo.png" alt="postgresql-logo" data-toggle="tooltip" data-placement="top" title="PostgreSQL - one of many (but my favorite) SQL flavors for storing structured data i.e. makes it easier to retrieve later and/or join with different datasets"></a>
+                      </div>
+                      <div>
+                        <a href="https://www.mongodb.com/" target="_blank"><img class="logo" src="static/img/mongodb-logo.png" alt="mongodb-logo" data-toggle="tooltip" data-placement="top" title="MongoDB - document-based NoSQL database for flexible writing"></a>
+                      </div>
+                      <div>
+                        <a href="https://www.mathworks.com/products/matlab.html" target="_blank"><img class="logo" src="static/img/matlab-logo.png" alt="matlab-logo" data-toggle="tooltip" data-placement="top" title="MATLAB - proprietary mathematical computing language for data-oriented jobs and tool development"></a>
+                      </div>
+                      <div>
+                        <a href="https://docs.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office" target="_blank"><img class="logo" src="static/img/vba-logo.png" alt="vba-logo" data-toggle="tooltip" data-placement="top" title="VBA (Automated Excel) - For organization, small/personal tool building, ad-hoc data viz, etc."></a>
+                      </div>
+                      <div>
+                        <a href="https://www.getdbt.com/" target="_blank"><img class="logo" src="static/img/dbt-logo.png" alt="dbt-logo" data-toggle="tooltip" data-placement="top" title="DBT - The T in ELT"></a>
+                      </div>
+                    </div>
+
+                    <h3>Backend Development</h3>
+                    <div class="qual-icons">
+                      <div>
+                        <a href="https://www.python.org/" target="_blank"><img class="logo" src="static/img/python-logo.png" alt="python-logo" data-toggle="tooltip" data-placement="top" title="Python - api development, data analytics, data engineering, etc. You name it, it's doable in Python"></a>
+                      </div>
+                      <div>
+                        <a href="https://nodejs.org/en/" target="_blank"><img class="logo" src="static/img/node-logo.png" alt="node-logo" data-toggle="tooltip" data-placement="top" title="NodeJS - an alternative to Python (for many of the same types of applications) that uses Javascript"></a>
+                      </div>
+                    </div>
+                    
+                    <h3>Frontend Development</h3>
+                    <div class="qual-icons">
+                      <div>
+                        <a href="https://d3js.org/" target="_blank"><img class="logo" src="static/img/d3-logo.png" alt="d3-logo" data-toggle="tooltip" data-placement="top" title="D3 - for custom data visualizations"></a>
+                      </div>
+                      <div>
+                        <a href="https://www.w3.org/" target="_blank"><img class="logo" src="static/img/js-html-css-logos.png" alt="js-html-css-logo" data-toggle="tooltip" data-placement="top" title="HTML, CSS, JS - the foundational triage of frontend dev"></a>
+                      </div>
+                      <div>
+                        <a href="https://reactjs.org/" target="_blank"><img class="logo" src="static/img/react-logo.png" alt="react-logo" data-toggle="tooltip" data-placement="top" title="React - for dynamic web pages"></a>
+                      </div>
+                      <div>
+                        <a href="https://leafletjs.com/" target="_blank"><img class="logo" src="static/img/leaflet-logo.png" alt="leaflet-logo" data-toggle="tooltip" data-placement="top" title="Leaflet - for data-oriented map visualizations"></a>
+                      </div>
+                      <div>
+                        <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank"><img class="logo" src="static/img/bootstrap-logo.png" alt="bootstrap-logo" data-toggle="tooltip" data-placement="top" title="Bootstrap - for quick web page styling that is predicatable cross-platform"></a>
+                      </div>
+                      <div>
+                        <a href="https://jquery.com/" target="_blank"><img class="logo" src="static/img/jquery-logo.png" alt="jquery-logo" data-toggle="tooltip" data-placement="top" title="JQuery - html document manipulation"></a>
+                      </div>
+                      <div>
+                        <a href="https://webpack.js.org/" target="_blank"><img class="logo" src="static/img/webpack-logo.png" alt="webpack-logo" data-toggle="tooltip" data-placement="top" title="Webpack - static module bundling for Javascript applications"></a>
+                      </div>
+                    </div>
+
+                    <h3>Tools</h3>
+                    <div class="qual-icons">
+                      <div>
+                        <a href="https://www.docker.com/" target="_blank"><img class="logo" src="static/img/docker-logo.png" alt="docker-logo"  data-toggle="tooltip" data-placement="top" title="Docker - containerization is critical for repeatable deployments (many other benefits as well)"></a>
+                      </div>
+                      <div>
+                        <a href="https://git-scm.com/" target="_blank"><img class="logo" src="static/img/git-logo.png" alt="git-logo" data-toggle="tooltip" data-placement="top" title="Git - version control. Enough said."></a>
+                      </div>
+                      <div>
+                        <a href="https://www.gnu.org/software/bash/" target="_blank"><img class="logo" src="static/img/bash-logo.png" alt="bash-logo" data-toggle="tooltip" data-placement="top" title="Bash - Unix command line for automating workflows and faster development"></a>
+                      </div>
+                      <div>
+                        <a href="https://code.visualstudio.com/" target="_blank"><img class="logo" src="static/img/vscode-logo.png" alt="vscode-logo" data-toggle="tooltip" data-placement="top" title="VS Code - the only editor I use. Change my mind."></a>
+                      </div>
+                      <div>
+                        <a href="https://colab.research.google.com/" target="_blank"><img class="logo" src="static/img/colab-logo.png" alt="colab-logo" data-toggle="tooltip" data-placement="top" title="Google Colab - cloud editor for data analysis/science"></a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="education">
+                    <h2>Education</h2>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div id=>
+                          <img id="school-logo" src="static/img/buckeye-logo.png">
+                        </div>
+                      </div>
+                      <div class="col-lg-9">
+                        <ul>
+                            <li>B.S. in Mechanical Engineering from Ohio State University, Class of 2018</li>
+                            <li>Graduated with Honors, 3.74 GPA</li>
+                            <li>2.5 years of Undergraduate Research in the Laboratory of Sound & Vibration Research <a href="#publications">(See Research/Publications section)</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h2>Honors/Awards</h2>
+                    <div class="row">
+                      <ul style="margin-left: 20px;">
+                        <li><a href="https://ugresearch.osu.edu/Documents/2018%20Denman%20Winners.pdf">3rd Place Mechanical & Aerospace Engineering Research</a>: OSU Denman Research Forum 2018</li>                     
+                        <li><a href="https://mae.osu.edu/news/2018/04/awards-ceremony-honors-outstanding-students-faculty-and-alumni">2018 Outstanding Leadership and Research Award</a>: OSU Dept. of Mechanical and Aerospace Engineering</li>  
+                      </ul>
+                      <div class="school-logo-container">
+                        <a href="static/downloads/denman_poster.pdf" target="_blank"><img id="research-poster" src="static/img/denman_poster.png"></a>
+                      </div>
+                    </div>
+                    <h2 id="publications">Research/Publications</h2>
+                    <ul>
+                      <li>
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352431620300560?via%3Dihub" target="_blank">
+                          Vuyk, P., & Harne, R.L. (2020). Collapse characterization and shock mitigation by elastomeric metastructures. Extreme
+                          Mechanics Letters, 37, 100682.
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/adem.201700828" target="_blank">
+                          Vuyk, P., Cui, S., & Harne, R.L. (2018). Illuminating Origins of Impact Energy Dissipation in Mechanical Metamaterials.
+                          Advanced Engineering Materials, 20, 1700828.
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="projects">
+                    <h2>Projects</h2>
+                    <ul>
+                      <li><em><b><a href="https://ideadata.org/resources/resource/1881/part-b-indicator-data-display-wizard" target="_blank">IDC Part B Indicator Data Display Wizard</a></b></em></li>
+                      <ul>
+                        <li>In Progress</li>
+                        <li>Project completed with <a href="https://www.inciter.io/" target="_blank">Inciter</a></li>
+                        <li>Developing new iteration of Excel/VBA tool that empowers state data managers from all 50 U.S. states to easily store, retrieve, and visualize annual indicator data for Part B of Section 618 of the Individuals with Disabilities Education Act (IDEA)</li>
+                        <li>Excel automated with 100% VBA</li>
+                      </ul>
+                      <li><em><b>Data Pipeline - Snowflake to HubSpot Deals</b></em></li>
+                      <ul>
+                        <li>Project completed with <a href="https://www.inciter.io/" target="_blank">Inciter</a></li>
+                        <li>Developed automated data pipeline to query snowflake data warehouse daily, check for the presence of new deals, and then add those to HubSpot deals</li>
+                        <li>NodeJS, AWS Lambda, serverless</li>
+                      </ul>
+                      <li><em><b><a href="https://offers.techimpact.org/tech_roi" target="_blank">Tech Impact - ROI in Nonprofit Technology Decisions - Data Exploration and Statistical Analysis</a></b></em></li>
+                      <ul>
+                        <li>Project completed with <a href="https://www.inciter.io/" target="_blank">Inciter</a></li>
+                        <li>Performed detailed data exploration and analysis on survey data regarding nonprofit technology decisions made across numerous organizations</li>
+                        <li>Identified and helped explain correlations, potential bias, and conclusive outcomes from the survey data to help inform other non-profit organizations making technology decisions</li>  
+                      </ul>
+                      <li>
+                        <em><b>And on my <a href="https://github.com/petervuyk456">GitHub</a></b>, there are numerous smaller projects that I have put together to increase familiarity and comfort level with many development concepts over the years</em>
+                      </li>
+                    </ul>
+                  </div>
+         
+                </div>
+              </div>
+            </div>  
+          </div>
+
+          </div>
+        </div>
+      </main>
+      <footer>
+        <a href="https://github.com/petervuyk456"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/peter-vuyk-645284a8/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:peter.vuyk456@gmail.com"><i class="fas fa-envelope"></i></a>
+      </footer> 
+    </div>
+    <canvas id="background">
+    </canvas>
+    <div id="cover" >
+    </div>
+  </div>
+  <!-- D3.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.3.1/d3.js" integrity="sha512-CQk1Bd5qczb5n31LOjQ8nmasspRasRP95SzVXcjM2Crm+3pmP/evOvFqrHeR26IA6pkgraiKom0aGWF29d8xqQ==" crossorigin="anonymous"></script>
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous"></script>
+  <!-- Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- Delauney Triangulation -->
+  <script src="https://cdn.rawgit.com/ironwallaby/delaunay/master/delaunay.js"></script>
+  <!-- Custom js -->
+  <script src="static/js/navbar.js"></script>
+  <script src="static/js/tooltips.js"></script>
+  <script src="static/js/misc.js"></script>
+  <script src="static/js/about-me.js"></script>
+  <script src="static/js/contact-form.js"></script>
+  <script src="static/js/drifter_stars_bground.js"></script>  
+  <!-- Submit Google Form Using "AJAX" -->
+  <script data-cfasync="false" src="static/js/form-submission-handler.js"></script>
 </body>
 </html>
