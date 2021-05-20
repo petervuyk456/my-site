@@ -186,7 +186,7 @@ i:hover {
   background-color: var(--primary-2);
   color: var(--secondary-1);
   font-family: var(--header-font);
-  padding: 2em 0em 2em;
+  padding: 2em 0.4em 2em;
   /* width: fit-content; */
 }
 
